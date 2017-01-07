@@ -3,3 +3,13 @@
 a= 21;
 b= a * 2;
 console.log (b);
+
+alert (b);
+
+age=prompt("Please tell me your age");
+console.log(prompt);
+
+var a = 20;
+a=a+1;
+a=a*2;
+console.log(a);
