@@ -13,3 +13,11 @@ var a = 20;
 a=a+1;
 a=a*2;
 console.log(a);
+
+var amount=199.99;
+amount=amount * 2;
+console. log(amount);
+
+amount = "$" + String(amount);
+console. log(amount);
+
