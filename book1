@@ -24,3 +24,51 @@ console. log(amount);
 for (var i =0; i<=9; i = i +1){
     console.log(i);
 }
+
+//Phone purchase practice
+
+
+const PHONE_PRICE = 99.98;
+const ACCESSORY_PRICE = 13.99;
+const SPENDING_THRESHOLD = 200.00;
+const TAX_RATE = 0.08;
+
+var bank_balance = 300.00;
+var amount = 0;
+
+//functions
+
+function calculatetax(amount){
+    return amount * TAX_RATE;
+}
+
+function decimalreturn(amount) {
+    return "$" + amount.toFixed(2);
+}
+
+//BUYING phone 
+
+while (amount<bank_balance) {
+    amount = amount + PHONE_PRICE;
+ //buy new phone
+
+    if (amount<SPENDING_THRESHOLD) {
+        amount = amount +ACCESSORY_PRICE;
+        }   //buy accessory
+    }
+
+amount = amount + calculatetax(amount);
+
+console.log("Your purchase is" + decimalreturn(amount));
+
+//can you afford?
+
+if (amount>bank_balance) {
+    console.log ("You can't afford");
+}
+
+
+
+
+    
+
