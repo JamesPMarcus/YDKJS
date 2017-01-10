@@ -164,6 +164,26 @@ function foo() {
 
 console.log(a);
 
+//Strict mode
 
+function foo() {
+    "use strict";
+    //this code is strict mode
     
+    function bar(){
+        //this code is strict mode
+    }
+}
+
+function tron(){...}
+    //this code is not strict
+    
+    //dissalows the implicit auto-global variable declaration from omitting the var:
+    
+    funtion foo() {
+        "use strict"; //turn on strict mode
+        a = 1; // 'var' missing, ReferenceError
+    }
+    
+    foo();
 
