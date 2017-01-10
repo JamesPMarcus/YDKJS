@@ -186,4 +186,42 @@ function tron(){...}
     }
     
     foo();
+    
+    //Closures
+    
+    function makeAdder(x) {
+    
+        function add(y){
+            return y + x;
+        };
+        
+        return add;
+    }
 
+var plusOne = makeAdder(1);
+
+plusOne(4);  //5
+
+
+//Closure: Using modules
+
+function Usuer(){
+    var username, password;
+    
+    function doLogin(user,pw){
+        username = user;
+        password = pw;
+    }
+    
+    var publicAPI = {
+        login: doLogin
+    };
+    
+    return publicAPI;
+}
+
+//create a 'user' module instance
+
+var fred = user();
+
+fred.login( "fred", "12Battery34!");
