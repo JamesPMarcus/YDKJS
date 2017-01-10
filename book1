@@ -59,7 +59,7 @@ while (amount<bank_balance) {
 
 amount = amount + calculatetax(amount);
 
-console.log("Your purchase is" + decimalreturn(amount));
+console.log("Your purchase is " + decimalreturn(amount));
 
 //can you afford?
 
@@ -67,7 +67,102 @@ if (amount>bank_balance) {
     console.log ("You can't afford");
 }
 
+//obect types
 
+var obj = {a :"hello world",
+b:42,
+c:true
+};
+
+obj.a;
+obj.b;
+obj.c;
+
+obj["a"];
+obj["b"];
+obj["c"];
+
+var obj = {
+a:"hello world",
+b: 42
+};
+
+var b= "a";
+
+obj[b]; //"hello world"
+obj["b"]; //42
+
+//Array
+
+var arr = [
+"hello world",
+42,
+true,
+];
+
+arr [0];  //"hello world"
+arr[1]; //42
+
+//function (object subytype)
+
+function foo(){
+return 42;
+}
+
+foo.bar = "hello world";
+
+typeof foo; //"function"
+typeof foo(); //"number"
+typeof foo.bar; //"string"
+
+//built in type methods
+
+var a="hello world";
+var b = "3.14159";
+
+a.lenth; //11
+a.toUpperCase(); //"HELLO WORLD"
+b.toFixed(4); //3.1416
+
+//Explicit coercion
+
+var a = "42";
+var b = Number (a);
+
+a;  //"42"
+b; //42
+
+//Implicit coercion
+
+var a ="42";
+
+var b = a * 1; //implicitly coerced to 42
+
+a; //"42"
+b; //42
+
+
+//Implicit cercion
+
+var a ="42";
+var b = 42'
+
+a == b; //true
+a ===b; //false 
+
+//identifying a variable
+
+var a = 2;
+
+foo(); 
+
+function foo() {
+    a = 3;
+    console.log(a);
+    var a;
+}
+
+console.log(a);
 
 
     
