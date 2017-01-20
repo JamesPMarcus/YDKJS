@@ -15,3 +15,7 @@ var c = foo( 2 );
 
 //RHS:
 //foo(2...), a +, + b, =a, 
+
+
+//LHS = left hand side searching by engine
+//RHS = right hand side searching by engine 
