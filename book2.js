@@ -33,3 +33,43 @@ function foo() {
     }
 }
 foo();
+
+
+//Immediately invoked function expression 
+
+var a=2;
+(function foo() {
+    
+    var a = 3;
+    console.log( a );
+    
+})();
+
+console.log( a );
+
+//allows function foo only to be in the scope where the expression is stated, hiding foo inside itself does not pollute the enclosing scope
+
+//Anonymous vs named
+
+setTimeout (function() {
+    console.log("I waited 1 second!");
+}, 1000);
+
+//above is anonymous
+
+//best practice is to always use a name for your function expressions
+
+setTimeout( function timeoutHandler() {
+    console.log("I waited 1 second!");
+}, 1000);
+
+//IIFE
+
+var a =2;
+(function IIFE () {
+    
+    var a =3;
+    console.log ( a ); //3
+})();
+
+console.log(a); //2
