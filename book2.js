@@ -19,3 +19,17 @@ var c = foo( 2 );
 
 //LHS = left hand side searching by engine
 //RHS = right hand side searching by engine 
+
+//Collison avoidance
+
+function foo() {
+    function bar(a) {
+        i=3; //changing the 'i' in the enclosing scope's for-loop
+        console.log (a+i);
+    }
+    
+    for (var i=0; i<10, i++) {
+        bar (i * 2); //infinite loop
+    }
+}
+foo();
